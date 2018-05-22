@@ -3,15 +3,20 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+
+#include "Objet.h"
+
+class AttaquePhysique;
+class AttaqueSpeciale;
 
 class Pokemon {
  private:
-  int id;
   std::string nom;
   int prix;
   std::string type;
-  int pvMax;
   int pv; // les points de vie
+    int pvMax;
   int niveau;
   int attPhy;
   int attSpe;
@@ -20,27 +25,29 @@ class Pokemon {
   int attaque;
   int vitesse;
   Objet objet;
+  std::vector<AttaquePhysique*> listAttPhy;
+  std::vector<AttaqueSpeciale*> listAttSpe;
   bool etat;
 
  public:
-  Pokemon(int id, std::string _nom, int _prix, std::string _type, int _pv, int _niveau, int _attPhy, int _attSpe, int _defPhy, int _defSpe, int _attaque, int _vitesse, std::string _objet);
-  void Attaquer(int cible, int attaque);
+  Pokemon(std::string _nom, int _prix, std::string _type, int _pv, int _niveau, int _attPhy, int _attSpe, int _defPhy, int _defSpe, int _attaque, int _vitesse, Objet _objet);
+  void AttaquerPhysique(Pokemon cible, AttaquePhysique& attaque);
+  void AttaquerSpeciale(Pokemon cible, AttaqueSpeciale& attaque);
   void Afficher();
   void UtiliserObjet();
-  id GetId();
-  std::string GetNom();
   std::string GetType();
-  int GetPvMax();
-  int GetPv();
   int GetNiveau();
   int GetAttPhy();
   int GetAttSpe();
   int GetDefPhy();
   int GetDefSpe();
   int GetVitesse();
-  int GetPrix();
+  int GetPv();
+  int GetPvMax();
+  void RecupPv(int pvRendu);
   void SetObjet(Objet nouvelObjet);
-  void RecupPv(int pv);
+  void SetAttPhy(AttaquePhysique* attaque);
+  void SetAttSpe(AttaqueSpeciale* attaque);
 };
 
 #endif
