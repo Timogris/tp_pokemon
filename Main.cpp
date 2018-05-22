@@ -101,9 +101,27 @@ int main() {
   }:
   };
 
+  cout << "J2 va acheter son Pokemon" << endl;
+
+  while (joueur1.GetPokemon() != "Aucun") {
+  switch (selection) { 
+  case 1: bulbizarre.Afficher();
+    bulbizarre.AchatPokemon(joueur2);
+  case 2: salameche.Afficher();
+    salameche.AchatPokemon(joueur2);
+  case 3: carapuce.Afficher();
+    carapuce.AchatPokemon(joueur2);
+  case 4: pikachu.Afficher();
+    pikachu.AchatPokemon(joueur2);
+  case 5: chenipan.Afficher();
+    chenipan.AchatPokemon(joueur2);
+  case 6: arceus.Afficher();
+    arceus.AchatPokemon(joueur2);
+  };
+  };
+
   return 0;
 
 };
 
-  cout << "J2 va acheter son Pokemon" << endl;
 
