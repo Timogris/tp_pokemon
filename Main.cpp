@@ -9,6 +9,7 @@
 #include "Joueur.h"
 
 using namespace std;
+bite
 
 void AchatPokemon(Joueur joueur) {
   char on;
