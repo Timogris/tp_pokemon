@@ -103,7 +103,7 @@ int main() {
 
   cout << "J2 va acheter son Pokemon" << endl;
 
-  while (joueur1.GetPokemon() != "Aucun") {
+  while (joueur2.GetPokemon() != "Aucun") {
   switch (selection) { 
   case 1: bulbizarre.Afficher();
     bulbizarre.AchatPokemon(joueur2);
