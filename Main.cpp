@@ -84,11 +84,8 @@ int main() {
 
   cout << "J1 va acheter son Pokemon" << endl;
 
-  while (joueur1.GetPokemon() != "Aucun") {
+  while (joueur1.GetPokemon() == "Aucun") {
     cout << "J1 a " << joueur1.GetArgent() << " pieces" << endl; 
-    
-    cout << "J1 va acheter son Pokemon" << endl;
-    cout << endl;
     
     cout << "[1] Bulbizarre [2] Salameche" << endl;
     cout << endl;
@@ -121,11 +118,8 @@ int main() {
 
   cout << "J2 va acheter son Pokemon" << endl;
 
-  while (joueur2.GetPokemon() != "Aucun") {
+  while (joueur2.GetPokemon() == "Aucun") {
     cout << "J2 a " << joueur2.GetArgent() << " pieces" << endl; 
-    
-    cout << "J2 va acheter son Pokemon" << endl;
-    cout << endl;
     
     cout << "[1] Bulbizarre [2] Salameche" << endl;
     cout << endl;
@@ -137,7 +131,6 @@ int main() {
     
     cout << "Vous pouvez afficher les stats d'un Pokemon en saisissant [1], [2], [3], [4], [5] ou [6]" << endl;
     
-    cout << "J2 a " << joueur2.GetArgent() << " pieces" << endl;
     cin >> selection;
     getchar();
 
@@ -157,6 +150,12 @@ int main() {
     };
   };
 
+  cout <<  "J1 va acheter un objet pour son Pokemon" << endl;
+
+  while (joueur1.GetObjetPokemon() == "Aucun") { 
+    cout << "J1 a " << joueur1.GetArgent << " pieces" << endl;
+
+  }
   return 0;
 
 };

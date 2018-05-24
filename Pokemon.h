@@ -44,6 +44,7 @@ class Pokemon {
   int GetVitesse();
   int GetPv();
   int GetPvMax();
+  std::string GetObjet();
   void RecupPv(int pvRendu);
   void SetObjet(Objet nouvelObjet);
   void SetAttPhy(AttaquePhysique* attaque);

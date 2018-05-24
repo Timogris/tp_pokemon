@@ -120,3 +120,7 @@ void Pokemon::SetAttPhy(AttaquePhysique* attaque) {
 void Pokemon::SetAttSpe(AttaqueSpeciale* attaque) {
     listAttSpe.push_back(attaque);
 }
+
+string Pokemon::GetObjet() {
+  return objet;
+}

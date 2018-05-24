@@ -21,6 +21,7 @@ public:
     Objet(int _id, std::string _nom, std::string _desc, int _restaurPV);
 
     void Action(Pokemon& poke);
+    std::sring GetObjet();
     void Afficher();
 
 };

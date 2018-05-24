@@ -12,7 +12,9 @@ class Joueur {
  public:
   Joueur(std::string _nom, int _argent, Pokemon _pokemon);
   int GetArgent();
-  string GetPokemon();
+  std::string GetPokemon();
+  std::string GetObjetPokemon();
+  
   void SetPokemon(Pokemon _pokemon);
 
 }
