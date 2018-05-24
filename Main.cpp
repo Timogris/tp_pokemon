@@ -11,7 +11,7 @@
 using namespace std;
 
 void AchatPokemon(Joueur joueur) {
-  char on;
+  char yn;
   cout << "Acheter " << this->GetNom() << " ? Y/n" << endl;
   cin >> yn;
 
@@ -25,6 +25,11 @@ void AchatPokemon(Joueur joueur) {
     } 
 
   }
+};
+
+void AchatBaie(Joueur joueur) {
+  char yn;
+  cout << Acheter <<
 };
 
 int main() {
@@ -74,50 +79,82 @@ int main() {
   cout << endl;
 
 
-  cout << "J1 a " << joueur1.GetArgent() << " pieces" << endl; 
-  cout << "J2 a " << joueur2.GetArgent() << " pieces" << endl;
-  cout << "Achetez un Pokemon" << endl;
-  cout << "Vous pouvez afficher les stats des Pokemon en saisissant [1], [2], [3], [4], [5] ou [6]" << endl;
+
   int selection;
-  cin >> selection;
-  getchar();
 
   cout << "J1 va acheter son Pokemon" << endl;
 
   while (joueur1.GetPokemon() != "Aucun") {
-  switch (selection) { 
-  case 1: bulbizarre.Afficher();
-    bulbizarre.AchatPokemon(joueur1);
-  case 2: salameche.Afficher();
-    salameche.AchatPokemon(joueur1);
-  case 3: carapuce.Afficher();
-    carapuce.AchatPokemon(joueur1);
-  case 4: pikachu.Afficher();
-    pikachu.AchatPokemon(joueur1);
-  case 5: chenipan.Afficher();
-    chenipan.AchatPokemon(joueur1);
-  case 6: arceus.Afficher();
-    arceus.AchatPokemon(joueur1);
-  }:
+    cout << "J1 a " << joueur1.GetArgent() << " pieces" << endl; 
+    
+    cout << "J1 va acheter son Pokemon" << endl;
+    cout << endl;
+    
+    cout << "[1] Bulbizarre [2] Salameche" << endl;
+    cout << endl;
+    cout << "[3] Carapuce   [4] Pikachu" << endl;
+    cout << endl;
+    cout << "[5] Chenipan   [6] Arceus" << endl;
+    
+    cout << endl;
+    
+    cout << "Vous pouvez afficher les stats d'un Pokemon en saisissant [1], [2], [3], [4], [5] ou [6]" << endl;
+
+    cin >> selection;
+    getchar();
+
+    switch (selection) { 
+    case 1: bulbizarre.Afficher();
+      bulbizarre.AchatPokemon(joueur1);
+    case 2: salameche.Afficher();
+      salameche.AchatPokemon(joueur1);
+    case 3: carapuce.Afficher();
+      carapuce.AchatPokemon(joueur1);
+    case 4: pikachu.Afficher();
+      pikachu.AchatPokemon(joueur1);
+    case 5: chenipan.Afficher();
+      chenipan.AchatPokemon(joueur1);
+    case 6: arceus.Afficher();
+      arceus.AchatPokemon(joueur1);
+    }:
   };
 
   cout << "J2 va acheter son Pokemon" << endl;
 
   while (joueur2.GetPokemon() != "Aucun") {
-  switch (selection) { 
-  case 1: bulbizarre.Afficher();
-    bulbizarre.AchatPokemon(joueur2);
-  case 2: salameche.Afficher();
-    salameche.AchatPokemon(joueur2);
-  case 3: carapuce.Afficher();
-    carapuce.AchatPokemon(joueur2);
-  case 4: pikachu.Afficher();
-    pikachu.AchatPokemon(joueur2);
-  case 5: chenipan.Afficher();
-    chenipan.AchatPokemon(joueur2);
-  case 6: arceus.Afficher();
-    arceus.AchatPokemon(joueur2);
-  };
+    cout << "J2 a " << joueur2.GetArgent() << " pieces" << endl; 
+    
+    cout << "J2 va acheter son Pokemon" << endl;
+    cout << endl;
+    
+    cout << "[1] Bulbizarre [2] Salameche" << endl;
+    cout << endl;
+    cout << "[3] Carapuce   [4] Pikachu" << endl;
+    cout << endl;
+    cout << "[5] Chenipan   [6] Arceus" << endl;
+    
+    cout << endl;
+    
+    cout << "Vous pouvez afficher les stats d'un Pokemon en saisissant [1], [2], [3], [4], [5] ou [6]" << endl;
+    
+    cout << "J2 a " << joueur2.GetArgent() << " pieces" << endl;
+    cin >> selection;
+    getchar();
+
+    switch (selection) { 
+    case 1: bulbizarre.Afficher();
+      bulbizarre.AchatPokemon(joueur2);
+    case 2: salameche.Afficher();
+      salameche.AchatPokemon(joueur2);
+    case 3: carapuce.Afficher();
+      carapuce.AchatPokemon(joueur2);
+    case 4: pikachu.Afficher();
+      pikachu.AchatPokemon(joueur2)
+    case 5: chenipan.Afficher();
+      chenipan.AchatPokemon(joueur2);
+    case 6: arceus.Afficher();
+      arceus.AchatPokemon(joueur2);
+    };
   };
 
   return 0;
